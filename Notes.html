@@ -7,61 +7,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <title>Notes App </title>
 </head>
 <style>
-    .cardholder{
+    .cardholder {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
     }
-    .card{
+    
+    .card {
         margin: 10px;
     }
-    #tt{
-        width:50%
-        
+    
+    #tt {
+        width: 50%
     }
-    .card-title{
+    
+    .card-title {
         text-transform: uppercase;
     }
-    #darkimg{
+    
+    #darkimg {
         cursor: pointer;
         width: 40px;
         height: 35px;
         margin-right: 10px;
     }
-   
-    :root{
-        --primary-color:black;
-        --secondary-color:white;
-        --third-color:white;
+    
+     :root {
+        --primary-color: black;
+        --secondary-color: white;
+        --third-color: white;
     }
-    .dark-theme{
-        --primary-color:white;
-        --secondary-color:#041C32;
-        --third-color:rgb(61, 59, 59);
+    
+    .dark-theme {
+        --primary-color: white;
+        --secondary-color: #041C32;
+        --third-color: rgb(61, 59, 59);
     }
-    body{
-       color: var(--primary-color);
-       background-color: var(--secondary-color);
+    
+    body {
+        color: var(--primary-color);
+        background-color: var(--secondary-color);
     }
-    .card{
+    
+    .card {
         background-color: var(--third-color);
     }
-    .card-body{
-        color:var(--primary-color);
+    
+    .card-body {
+        color: var(--primary-color);
     }
 </style>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Make Notes</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -74,8 +80,7 @@
                     <a class="nav-link" href="#">About</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Items
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -87,16 +92,16 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact</a>
-                    
+
                 </li>
             </ul>
-            
+
             <form class="form-inline my-2 my-lg-0">
                 <!-- Default checked -->
 
-    <img src="moon.png" id="darkimg">
+                <img src="moon.png" id="darkimg">
 
- 
+
                 <input class="form-control mr-sm-2" type="search" id="searchTxt" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
@@ -105,168 +110,178 @@
 
     <div class="container my-4">
         <h2 class="text-center">Add Notes Here</h2>
-         
-            
+
+
 
         <div class="card">
             <div class="card-body">
-              <h6>Title</h6>
-              <textarea class="form-control" id="tt" rows="1"></textarea>
-              <h6 style="margin-top:15px;">Description</h6>
-              <textarea class="form-control" id="description"  rows="3"></textarea>
+                <h6>Title</h6>
+                <textarea class="form-control" id="tt" rows="1"></textarea>
+                <h6 style="margin-top:15px;">Description</h6>
+                <textarea class="form-control" id="description" rows="3"></textarea>
 
-              <button  style="margin-top:15px;" id="add" class="btn btn-primary">Add Notes</button>
-            <button  style="margin-top:15px;" id="clear" class="btn btn-primary" onclick="clearStorage()">Clear All</button>
+                <button style="margin-top:15px;" id="add" class="btn btn-primary">Add Notes</button>
+                <button style="margin-top:15px;" id="clear" class="btn btn-primary" onclick="clearStorage()">Clear All</button>
             </div>
-            
-          </div>
-            
 
-            
-            <h2 class="text-center my-3">Your notes are</h2>
+        </div>
 
-            <div class="cardholder" id="notes">
-             <!-- <div class="card"  style="width: 18rem;">
+
+
+        <h2 class="text-center my-3">Your notes are</h2>
+
+        <div class="cardholder" id="notes">
+            <!-- <div class="card"  style="width: 18rem;">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   <button  id="clear" class="btn btn-primary">Delete</button>
                 </div>
               </div>  -->
-         
-            </div>
-                      
-                
-              
+
         </div>
+
+
+
+    </div>
     </div>
 
-   </body>
+</body>
 
 
 
-   <script>
-
-          function eraseText() {
-    document.getElementById("tt").value = "";
-    document.getElementById("description").value = "";
-}
-
-
-    function getAndUpdate(){
-        // console.log("Updating List...");
-        tit = document.getElementById('tt').value;
-        
-        desc = document.getElementById('description').value;
-        if (localStorage.getItem('itemsJson')==null){
-            itemJsonArray = [];
-            itemJsonArray.push([tit, desc]);
-            localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
-        }
-        else{
-            itemJsonArrayStr = localStorage.getItem('itemsJson')
-            itemJsonArray = JSON.parse(itemJsonArrayStr);
-            itemJsonArray.push([tit, desc]);
-            localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
-            eraseText();
-            
-        }
-        update();
-        
+<script>
+    function eraseText() {
+        document.getElementById("tt").value = "";
+        document.getElementById("description").value = "";
     }
 
-    function update(){
-        if (localStorage.getItem('itemsJson')==null){
-            itemJsonArray = []; 
+
+    function getAndUpdate() {
+        // console.log("Updating List...");
+        tit = document.getElementById('tt').value;
+
+        desc = document.getElementById('description').value;
+        if (localStorage.getItem('itemsJson') == null) {
+            itemJsonArray = [];
             localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
-            
-        } 
-        else{
+        } else {
             itemJsonArrayStr = localStorage.getItem('itemsJson')
-            itemJsonArray = JSON.parse(itemJsonArrayStr); 
+            itemJsonArray = JSON.parse(itemJsonArrayStr);
+            itemJsonArray.push([tit.toUpperCase(), desc.toUpperCase()]);
+            localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+            eraseText();
+
+        }
+        update();
+
+    }
+
+    function update() {
+        if (localStorage.getItem('itemsJson') == null) {
+            itemJsonArray = [];
+            localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+
+        } else {
+            itemJsonArrayStr = localStorage.getItem('itemsJson')
+            itemJsonArray = JSON.parse(itemJsonArrayStr);
         }
         // Populate the table
         let notescard = document.getElementById("notes");
-        
+
         let html = "";
-  itemJsonArray.forEach((element, index)=> {
-    html += `
+        itemJsonArray.forEach((element, index) => {
+            html += `
     <div class="card" id="myobjnotes" style="width: 18rem;">
                 <div class="card-body">
-                  <h5 class="card-title" id=cardnotes>${element[0]}</h5>
+                  <h5 class="card-title search" id=cardnotes>${element[0]}</h5>
                   <p class="card-text">${element[1]}</p>
                   <button  id="clear" class="btn btn-primary" onclick="deleted(${index})">Delete</button>
                 </div>
               </div> 
             `
-  });
+        });
         notescard.innerHTML = html;
         let notesElm = document.getElementById("notes");
-  if (itemJsonArray.length != 0) {
-    notesElm.innerHTML = html;
-  } else {
-    notesElm.innerHTML = `Nothing to show! Use "Add a Note" section above to add notes.`;
-  }
-}
-        
-    
+        if (itemJsonArray.length != 0) {
+            notesElm.innerHTML = html;
+        } else {
+            notesElm.innerHTML = `Nothing to show! Use "Add a Note" section above to add notes.`;
+        }
+    }
+
+
     add = document.getElementById("add");
     add.addEventListener("click", getAndUpdate);
     update();
 
- 
 
-    function deleted(index){
+
+    function deleted(index) {
         itemJsonArrayStr = localStorage.getItem('itemsJson')
-                itemJsonArray = JSON.parse(itemJsonArrayStr);
-                // Delete itemIndex element from the array
-                itemJsonArray.splice(index, 1);
-                localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
-                update();
-    }
-
-
-    function clearStorage(){
-        if (confirm("Do you areally want to clear?")){
-        // console.log('Clearing the storage')
-        localStorage.clear();
+        itemJsonArray = JSON.parse(itemJsonArrayStr);
+        // Delete itemIndex element from the array
+        itemJsonArray.splice(index, 1);
+        localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
         update();
-        
+    }
+
+
+    function clearStorage() {
+        if (confirm("Do you areally want to clear?")) {
+            // console.log('Clearing the storage')
+            localStorage.clear();
+            update();
+
         }
     }
-    
-    
-var icon=document.getElementById("darkimg");
- 
-icon.addEventListener("click",()=>{
-    document.body.classList.toggle("dark-theme");
-      if(document.body.classList.contains("dark-theme")){
-          icon.src="sun.png";
-      }
-      else{
-          icon.src="moon.png";
-      }
-})
 
-let search = document.getElementById('searchTxt');
-search.addEventListener("input", function(){
 
-    let inputVal = search.value.toUpperCase();
-    // console.log('Input event fired!', inputVal);
-    let notes = document.getElementsByClassName('card');
-    Array.from(notes).forEach(function(element){
-       let cardTxt= element.getElementsByTagName("H5")[0].innerHTML;
+    var icon = document.getElementById("darkimg");
 
-        if(cardTxt.includes(inputVal)){
-            element.style.display = "block";
+    icon.addEventListener("click", () => {
+        document.body.classList.toggle("dark-theme");
+        if (document.body.classList.contains("dark-theme")) {
+            icon.src = "sun.png";
+        } else {
+            icon.src = "moon.png";
         }
-        else{
-            element.style.display = "none";
-        }
-       console.log(cardTxt);
     })
-})
 
+    let search = document.getElementById('searchTxt');
+    search.addEventListener("input", function() {
+        itemJsonArray = [];
+        let searchText = search.value.toUpperCase();
+        const notesArray = JSON.parse(localStorage.getItem('itemsJson'));
+        notesArray.forEach(element => {
+            if (element[0].includes(searchText) || element[1].includes(searchText)) {
+                console.log(element);
+                itemJsonArray.push(element);
+            }
+        });
+        let notescard = document.getElementById("notes");
+
+        let html = "";
+        itemJsonArray.forEach((element, index) => {
+            html += `
+    <div class="card" id="myobjnotes" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title search" id=cardnotes>${element[0]}</h5>
+                  <p class="card-text">${element[1]}</p>
+                  <button  id="clear" class="btn btn-primary" onclick="deleted(${index})">Delete</button>
+                </div>
+              </div> 
+            `
+        });
+        notescard.innerHTML = html;
+        let notesElm = document.getElementById("notes");
+        if (itemJsonArray.length != 0) {
+            notesElm.innerHTML = html;
+        } else {
+            notesElm.innerHTML = `Nothing to show! Use "Add a Note" section above to add notes.`;
+        }
+
+    })
 </script>
 
 
